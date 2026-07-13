@@ -151,8 +151,8 @@ export default function ZoomAnimation() {
         ref={finalContentRef} 
         className="absolute inset-0 z-30 flex flex-col items-center justify-center opacity-0 translate-y-10 pointer-events-none"
       >
-        <h3 className="text-theme-white text-3xl font-medium mb-4">Vector ink</h3>
-        <h2 className="text-theme-white text-6xl md:text-8xl font-bold tracking-tight text-center leading-tight">
+        <h3 className="text-theme-accent text-2xl md:text-3xl font-medium mb-4 uppercase tracking-widest">Vector ink</h3>
+        <h2 className="font-display text-theme-white text-7xl md:text-[8rem] tracking-tighter text-center leading-[0.9] uppercase">
           Each Line Can<br/>Be Reworked
         </h2>
         <p className="text-white/90 text-xl md:text-2xl mt-8 max-w-3xl text-center font-medium">

@@ -41,6 +41,13 @@ export default function Hero() {
     <section ref={containerRef} className="h-screen w-full flex flex-col items-center justify-center relative overflow-hidden bg-black">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-black to-black opacity-50"></div>
       
+      {/* Massive Background Text */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 opacity-[0.03] pointer-events-none w-full overflow-hidden flex justify-center">
+        <h1 className="text-[15vw] font-display text-white whitespace-nowrap tracking-tighter uppercase leading-none">
+          Limitless.
+        </h1>
+      </div>
+
       <h1 ref={titleRef} className="text-5xl md:text-7xl lg:text-8xl font-bold z-10 opacity-0 translate-y-8 tracking-tighter text-center bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 px-4">
         Smart AI Notebook
       </h1>

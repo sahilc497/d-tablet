@@ -14,7 +14,7 @@ export default function FinalCTA() {
           className="w-full max-w-3xl mx-auto rounded-3xl opacity-80 mix-blend-screen mb-12 shadow-[0_0_100px_rgba(255,255,255,0.1)]"
         />
         
-        <h2 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+        <h2 className="font-display text-6xl md:text-8xl font-bold mb-8 tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
           Write Naturally.<br/>Think Digitally.
         </h2>
         

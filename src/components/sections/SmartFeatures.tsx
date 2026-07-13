@@ -6,22 +6,22 @@ const features = [
   { 
     subtitle: "Collaborative Learning", 
     title: "One note for all meetings.", 
-    img: "https://picsum.photos/id/119/1920/1080" 
+    img: "/images/collaborative_tablet_1783969992237.png" 
   },
   { 
     subtitle: "Personalized Revision", 
     title: "AI generates chapter summaries.", 
-    img: "https://picsum.photos/id/180/1920/1080" 
+    img: "/images/revision_tablet_1783970004018.png" 
   },
   { 
     subtitle: "Smart Search", 
     title: "Instantly search across years of notes.", 
-    img: "https://picsum.photos/id/60/1920/1080" 
+    img: "/images/search_tablet_1783970013984.png" 
   },
   { 
     subtitle: "Cloud Sync", 
     title: "Automatic, secure Google Drive backup.", 
-    img: "https://picsum.photos/id/3/1920/1080" 
+    img: "/images/drive_tablet_1783970023164.png" 
   }
 ];
 
