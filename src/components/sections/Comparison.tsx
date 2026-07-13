@@ -23,8 +23,8 @@ export default function Comparison() {
         <h2 className="text-4xl md:text-6xl font-bold mb-6 text-center tracking-tight">The Future is Here.</h2>
         <p className="text-xl text-gray-400 text-center mb-20 max-w-3xl mx-auto">See how the Smart AI Digital Notebook fundamentally outperforms traditional paper-based learning.</p>
         
-        <div className="bg-white/[0.03] backdrop-blur-2xl rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
-          <div className="grid grid-cols-2 bg-white/5 border-b border-white/10 p-6">
+        <div className="bg-theme-card rounded-3xl border border-theme-border overflow-hidden shadow-2xl">
+          <div className="grid grid-cols-2 bg-theme-bg/50 border-b border-theme-border p-6">
             <div className="text-xl md:text-2xl font-semibold text-gray-400 text-center">Traditional Notebook</div>
             <div className="text-xl md:text-2xl font-bold text-white text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Smart AI Notebook</div>
           </div>

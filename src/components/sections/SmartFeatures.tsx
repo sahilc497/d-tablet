@@ -23,9 +23,9 @@ export default function SmartFeatures() {
               key={idx}
               whileHover={{ y: -10, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="bg-white/[0.03] backdrop-blur-xl p-10 rounded-[2rem] border border-white/10 hover:border-white/30 transition-all duration-500 shadow-2xl hover:shadow-[0_0_40px_rgba(255,255,255,0.1)] flex flex-col gap-4 group cursor-pointer"
+              className="bg-theme-card p-10 rounded-[2rem] border border-theme-border hover:border-theme-accent transition-all duration-500 shadow-2xl flex flex-col gap-4 group cursor-pointer"
             >
-              <div className="text-4xl text-white/80 p-4 bg-white/5 w-fit rounded-2xl group-hover:scale-110 group-hover:text-white transition-all duration-500">{feat.icon}</div>
+              <div className="text-4xl text-theme-white/80 p-4 bg-theme-bg w-fit rounded-2xl group-hover:scale-110 group-hover:text-theme-accent transition-all duration-500">{feat.icon}</div>
               <h3 className="text-2xl font-bold text-white mt-4">{feat.title}</h3>
               <p className="text-gray-400 text-lg">{feat.desc}</p>
             </motion.div>

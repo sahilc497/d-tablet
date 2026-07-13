@@ -20,7 +20,7 @@ export default function Header() {
         <a href="#" className="hover:text-white transition-colors">Support</a>
       </nav>
 
-      <button className="px-6 py-2 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors shadow-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] text-sm">
+      <button className="px-6 py-2 bg-theme-accent text-white font-semibold rounded-full hover:bg-blue-600 transition-colors shadow-lg text-sm">
         Buy Now
       </button>
     </motion.header>

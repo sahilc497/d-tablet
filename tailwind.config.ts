@@ -8,6 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', 'sans-serif'],
+        geist: ['var(--font-geist)', 'sans-serif'],
+      },
+      colors: {
+        theme: {
+          bg: '#0A0A0A',
+          white: '#FAFAFA',
+          accent: '#3B82F6',
+          card: '#111111',
+          border: '#262626',
+        }
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
