@@ -22,9 +22,9 @@ export default function FinalCTA() {
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-5 bg-white text-black font-bold text-lg rounded-full hover:bg-gray-200 transition-colors shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+            className="px-10 py-5 font-bold rounded-full text-xl text-gray-900 bg-gradient-to-b from-gray-100 via-gray-300 to-gray-400 border border-gray-400 shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),_0_0_25px_rgba(156,163,175,0.4)] hover:from-white hover:via-gray-200 hover:to-gray-300 transition-all tracking-wide active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.2)]"
           >
-            Buy Now — $399
+            Buy Now — ₹25,000
           </motion.button>
           
           <motion.button 

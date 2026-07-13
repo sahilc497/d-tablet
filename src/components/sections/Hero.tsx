@@ -59,7 +59,7 @@ export default function Hero() {
       <motion.button 
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="mt-12 z-20 px-8 py-4 bg-theme-accent text-white font-semibold rounded-full hover:bg-blue-600 transition-colors shadow-lg"
+        className="mt-12 z-20 px-10 py-4 font-bold rounded-full text-lg text-gray-900 bg-gradient-to-b from-gray-100 via-gray-300 to-gray-400 border border-gray-400 shadow-[inset_0_1px_2px_rgba(255,255,255,0.9),_0_0_20px_rgba(156,163,175,0.4)] hover:from-white hover:via-gray-200 hover:to-gray-300 transition-all tracking-wide active:shadow-[inset_0_3px_5px_rgba(0,0,0,0.2)]"
       >
         Discover NotePlus
       </motion.button>
