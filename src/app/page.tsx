@@ -7,6 +7,7 @@ import Specifications from "@/components/sections/Specifications";
 import Comparison from "@/components/sections/Comparison";
 import TestimonialsAndFAQ from "@/components/sections/TestimonialsAndFAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ZoomAnimation from "@/components/sections/ZoomAnimation";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <Comparison />
         <Specifications />
         <TestimonialsAndFAQ />
+        <ZoomAnimation />
         <FinalCTA />
       </SmoothScroll>
     </main>

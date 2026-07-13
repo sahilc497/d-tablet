@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
         geist: ['var(--font-geist)', 'sans-serif'],
+        playfair: ['var(--font-playfair)', 'serif'],
       },
       colors: {
         theme: {

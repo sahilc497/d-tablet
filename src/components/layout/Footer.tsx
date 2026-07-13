@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-black border-t border-white/10 pt-20 pb-10 px-10 text-gray-400">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
         <div>
-          <h3 className="text-white text-xl font-bold mb-6">Smart AI Notebook.</h3>
+          <h3 className="text-white text-4xl font-playfair tracking-normal lowercase mb-6">d tab</h3>
           <p className="text-sm">The future of learning, note-taking, and academic management.</p>
         </div>
         <div>

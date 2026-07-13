@@ -10,8 +10,8 @@ export default function Header() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 bg-black/40 backdrop-blur-md border-b border-white/5"
     >
-      <div className="text-xl font-bold tracking-tighter text-white cursor-pointer">
-        Smart AI Notebook.
+      <div className="text-3xl font-playfair tracking-normal text-white cursor-pointer lowercase">
+        d tab
       </div>
       
       <nav className="hidden md:flex gap-8 items-center text-sm font-medium text-gray-300">

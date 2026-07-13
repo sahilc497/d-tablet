@@ -1,36 +1,56 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaBrain, FaSync, FaLaptop, FaFilePdf, FaFolderOpen, FaBolt, FaBatteryHalf } from "react-icons/fa";
 
 const features = [
-  { icon: <FaBrain />, title: "Personalized Revision", desc: "AI generates chapter summaries and practice quizzes." },
-  { icon: <FaSync />, title: "Google Drive Backup", desc: "Automatic, secure cloud synchronization." },
-  { icon: <FaLaptop />, title: "Smart Search", desc: "Instantly search across years of handwritten notes." },
-  { icon: <FaFilePdf />, title: "Multi-Year Storage", desc: "A lifelong archive of assignments and projects." },
-  { icon: <FaFolderOpen />, title: "Collaborative Learning", desc: "Share notes and work seamlessly on group projects." },
-  { icon: <FaBolt />, title: "Offline Support", desc: "Keep writing without internet; auto-syncs when connected." },
+  { 
+    subtitle: "Collaborative Learning", 
+    title: "One note for all meetings.", 
+    img: "https://picsum.photos/id/119/1920/1080" 
+  },
+  { 
+    subtitle: "Personalized Revision", 
+    title: "AI generates chapter summaries.", 
+    img: "https://picsum.photos/id/180/1920/1080" 
+  },
+  { 
+    subtitle: "Smart Search", 
+    title: "Instantly search across years of notes.", 
+    img: "https://picsum.photos/id/60/1920/1080" 
+  },
+  { 
+    subtitle: "Cloud Sync", 
+    title: "Automatic, secure Google Drive backup.", 
+    img: "https://picsum.photos/id/3/1920/1080" 
+  }
 ];
 
 export default function SmartFeatures() {
   return (
-    <section className="py-32 px-10 bg-[#0a0a0a] min-h-screen flex flex-col items-center">
-      <div className="max-w-7xl w-full">
-        <h2 className="text-5xl md:text-7xl font-bold mb-20 text-center tracking-tight">Smart Features.</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feat, idx) => (
-            <motion.div 
-              key={idx}
-              whileHover={{ y: -10, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="bg-theme-card p-10 rounded-[2rem] border border-theme-border hover:border-theme-accent transition-all duration-500 shadow-2xl flex flex-col gap-4 group cursor-pointer"
-            >
-              <div className="text-4xl text-theme-white/80 p-4 bg-theme-bg w-fit rounded-2xl group-hover:scale-110 group-hover:text-theme-accent transition-all duration-500">{feat.icon}</div>
-              <h3 className="text-2xl font-bold text-white mt-4">{feat.title}</h3>
-              <p className="text-gray-400 text-lg">{feat.desc}</p>
-            </motion.div>
-          ))}
-        </div>
+    <section className="py-32 px-6 md:px-10 bg-theme-bg flex flex-col items-center">
+      <div className="max-w-6xl w-full flex flex-col gap-32 md:gap-48">
+        {features.map((feat, idx) => (
+          <motion.div 
+            key={idx}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex flex-col items-center text-center w-full"
+          >
+            <p className="text-xl md:text-3xl text-gray-400 font-medium mb-2">{feat.subtitle}</p>
+            <h2 className="text-4xl md:text-7xl font-bold text-theme-white mb-12 md:mb-20 tracking-tight">{feat.title}</h2>
+            
+            <div className="w-full rounded-[2rem] overflow-hidden shadow-2xl relative bg-theme-card group">
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-700 z-10"></div>
+              <img 
+                src={feat.img} 
+                alt={feat.title} 
+                className="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-1000 ease-out border-none outline-none"
+              />
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

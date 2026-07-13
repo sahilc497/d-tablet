@@ -3,32 +3,31 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaPenNib, FaBatteryFull, FaCloud, FaWifi } from "react-icons/fa";
 
 const features = [
   {
-    title: "Natural Handwriting",
+    subtitle: "Natural Handwriting",
+    title: "Write naturally. Think digitally.",
     desc: "Write notes, draw diagrams, and solve equations with a perfect paper-like feel.",
-    img: "https://images.unsplash.com/photo-1583339824000-60b64d3fb0cc?q=80&w=2070&auto=format&fit=crop",
-    icon: <FaPenNib className="text-3xl mb-4" />
+    img: "https://picsum.photos/id/0/1920/1080",
   },
   {
-    title: "Intelligent Classification",
+    subtitle: "Intelligent Classification",
+    title: "Automatically organized.",
     desc: "AI automatically categorizes your notes by semester and subject without manual effort.",
-    img: "https://images.unsplash.com/photo-1542744094-24638ea89614?q=80&w=2070&auto=format&fit=crop",
-    icon: <FaCloud className="text-3xl mb-4" />
+    img: "https://picsum.photos/id/20/1920/1080",
   },
   {
-    title: "AI Study Assistant",
+    subtitle: "AI Study Assistant",
+    title: "Your personal tutor.",
     desc: "Ask questions, generate flashcards, and converse with your own handwritten notes like ChatGPT.",
-    img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1926&auto=format&fit=crop",
-    icon: <FaPenNib className="text-3xl mb-4" />
+    img: "https://picsum.photos/id/36/1920/1080",
   },
   {
-    title: "Paperless Examinations",
+    subtitle: "Paperless Examinations",
+    title: "Secure digital exams.",
     desc: "Conduct secure, timed exams digitally with stylus-based responses and encrypted storage.",
-    img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
-    icon: <FaBatteryFull className="text-3xl mb-4" />
+    img: "https://picsum.photos/id/48/1920/1080",
   }
 ];
 
@@ -62,14 +61,12 @@ export default function HorizontalStory() {
       panels.forEach((panel: any) => {
         gsap.to(panel, {
           opacity: 1,
-          y: 0,
-          scale: 1,
           ease: "power2.out",
           scrollTrigger: {
             trigger: panel,
             containerAnimation: horizontalTl,
-            start: "left right",
-            end: "left center",
+            start: "left center",
+            end: "center center",
             scrub: true,
           }
         });
@@ -78,7 +75,7 @@ export default function HorizontalStory() {
       const images = gsap.utils.toArray('.story-img');
       images.forEach((img: any) => {
         gsap.fromTo(img, 
-          { scale: 1.4 },
+          { scale: 1.2 },
           {
             scale: 1,
             ease: "none",
@@ -86,7 +83,7 @@ export default function HorizontalStory() {
               trigger: img.closest('.story-panel'),
               containerAnimation: horizontalTl,
               start: "left right",
-              end: "right left",
+              end: "center center",
               scrub: true,
             }
           }
@@ -99,22 +96,22 @@ export default function HorizontalStory() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative bg-[#050505]">
+    <section ref={containerRef} className="relative bg-theme-bg overflow-hidden">
       <div className="w-[100vw] h-screen overflow-hidden flex items-center">
-        <div ref={pinWrapRef} className="h-screen flex justify-start items-center px-[10vw]">
-          {features.map((feature, i) => (
-            <div key={i} className="story-panel min-w-[75vw] h-[75vh] p-10 bg-[#111] rounded-[2.5rem] border border-white/5 shadow-2xl mr-[5vw] flex flex-col justify-center">
-              <div className="w-full h-[55%] mb-8 rounded-3xl overflow-hidden">
-                <img src={feature.img} alt={feature.title} className="story-img w-full h-full object-cover" />
-              </div>
-              <div className="flex items-start gap-6">
-                <div className="p-4 bg-white/5 rounded-2xl border border-white/10 text-white">
-                  {feature.icon}
-                </div>
-                <div>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">{feature.title}</h2>
-                  <p className="text-gray-400 text-xl font-medium max-w-2xl">{feature.desc}</p>
-                </div>
+        <div ref={pinWrapRef} className="h-screen flex items-center">
+          {features.map((feat, idx) => (
+            <div key={idx} className="story-panel w-[100vw] h-screen flex flex-col items-center justify-center text-center px-6 md:px-10 shrink-0">
+              <p className="text-xl md:text-3xl text-gray-400 font-medium mb-4">{feat.subtitle}</p>
+              <h2 className="text-4xl md:text-7xl font-bold text-theme-white mb-6 tracking-tight">{feat.title}</h2>
+              <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-12 md:mb-16">{feat.desc}</p>
+              
+              <div className="w-full max-w-5xl rounded-[2rem] overflow-hidden shadow-2xl relative bg-theme-card">
+                <div className="absolute inset-0 bg-black/10 z-10"></div>
+                <img 
+                  src={feat.img} 
+                  alt={feat.title} 
+                  className="story-img w-full aspect-[16/9] object-cover border-none outline-none"
+                />
               </div>
             </div>
           ))}
